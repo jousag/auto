@@ -3,32 +3,19 @@ package viikko2;
 public class Car {
     private String merkki;
     private String malli;
-    private int nopeus;
+    private int nopeus = 0; // Oletusnopeus on 0 km/h
 
-    public Car(String merkki, String malli, int nopeus) {
+    public Car(String merkki, String malli) {
         this.merkki = merkki;
         this.malli = malli;
-        this.nopeus = 0;
-    }
-
-    public String getMerkki() {
-        return merkki;
     }
 
     public void setMerkki(String merkki) {
         this.merkki = merkki;
     }
 
-    public String getMalli() {
-        return malli;
-    }
-
     public void setMalli(String malli) {
         this.malli = malli;
-    }
-
-    public int getNopeus() {
-        return nopeus;
     }
 
     public void kiihdyta(int lisays) {

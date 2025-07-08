@@ -8,16 +8,21 @@ public class App
     public static void main( String[] args )
     {
         Scanner scanner = new Scanner(System.in);
-        System.out.println( "Anna auton merkki: " );
+
+        System.out.print( "Anna auton merkki: " );
         String merkki = scanner.nextLine();
-        System.out.println( "Anna auton malli: " );
+
+        System.out.print( "Anna auton malli: " );
         String malli = scanner.nextLine();
-        int nopeus = 0;
-        boolean exit = false;
+
+       
+        Car newCar= null; // Auto-olio, joka luodaan myöhemmin
 
         // Luodaan auto-olio
-        Car newCar = new Car(merkki, malli, nopeus);
+        newCar = new Car(merkki, malli);
 
+
+        boolean exit = false;
         while(!exit) {
             System.out.println("1) Näytä auton tila");
             System.out.println("2) Muokka auton merkkiä ja mallia");
@@ -30,9 +35,9 @@ public class App
                     newCar.printSpecs();
                     break;
                 case 2:
-                    System.out.println("Anna uusi auton merkki: ");
+                    System.out.print("Anna uusi auton merkki: ");
                     newCar.setMerkki(scanner.next());
-                    System.out.println("Anna uusi auton malli: ");
+                    System.out.print("Anna uusi auton malli: ");
                     newCar.setMalli(scanner.next());
                     break;
                 case 3:
